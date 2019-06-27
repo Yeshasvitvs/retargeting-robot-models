@@ -1420,6 +1420,33 @@
   </joint>
 
   <!--Gazebo yarp motor control board plugins-->
+  <gazebo>
+
+  <plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://nao/conf/gazebo_nao_head.ini</yarpConfigurationFile>
+  </plugin>
+
+  <plugin name="controlboard_pelvis" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://nao/conf/gazebo_nao_pelvis.ini</yarpConfigurationFile>
+  </plugin>
+
+  <plugin name="controlboard_left_arm" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://nao/conf/gazebo_nao_left_arm.ini</yarpConfigurationFile>
+  </plugin>
+
+  <plugin name="controlboard_right_arm" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://nao/conf/gazebo_nao_right_arm.ini</yarpConfigurationFile>
+  </plugin>
+
+  <plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://nao/conf/gazebo_nao_left_leg.ini</yarpConfigurationFile>
+  </plugin>
+
+  <plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://nao/conf/gazebo_nao_right_leg.ini</yarpConfigurationFile>
+  </plugin>
+
+</gazebo>
 
   <!-- GAZEBO MATERIALS -->
   <gazebo reference="torso">

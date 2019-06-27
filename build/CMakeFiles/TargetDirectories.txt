@@ -1,6 +1,0 @@
-/home/yeshi/software/robot-models/build/CMakeFiles/install/strip.dir
-/home/yeshi/software/robot-models/build/CMakeFiles/install.dir
-/home/yeshi/software/robot-models/build/CMakeFiles/install/local.dir
-/home/yeshi/software/robot-models/build/CMakeFiles/list_install_components.dir
-/home/yeshi/software/robot-models/build/CMakeFiles/edit_cache.dir
-/home/yeshi/software/robot-models/build/CMakeFiles/rebuild_cache.dir
