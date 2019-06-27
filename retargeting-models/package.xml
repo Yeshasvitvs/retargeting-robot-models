@@ -1,0 +1,11 @@
+<package>
+  <name>retargeting-models</name>
+  <version>1.6.0</version>
+  <description>
+    This is robot-models ros package that contains the urdf models, meshes
+    and yarp motor control boards configurations
+  </description>
+  <maintainer email=""></maintainer>
+  <url></url>
+  <author></author>
+</package>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+    <name>@ROBOT_NAME@</name>
+    <version>1.0</version>
+    <sdf version='1.5'>model.urdf</sdf>
+    <author>
+        <name>Yeshasvi Tirupachuri</name>
+        <email>yeshasvi.tirupachuri@iit.it</email>
+    </author>
+    <description>Model of @ROBOT_NAME@ for retargeting</description>
+</model>
