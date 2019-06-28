@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(robot-models)
+project(retargeting-robot-models)
 
 macro(SUBDIRLIST result curdir)
   file(GLOB children RELATIVE ${curdir} ${curdir}/*)
@@ -14,16 +14,17 @@ macro(SUBDIRLIST result curdir)
 endmacro()
 
 # Copy the retargeting-models folder in the build tree
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/retargeting-models DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/robots DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/retargeting-robot-models)
+file(COPY package.xml DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/retargeting-robot-models)
 
-SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_BINARY_DIR}/retargeting-models/robots)
+SUBDIRLIST(ROBOTS_NAMES ${CMAKE_CURRENT_BINARY_DIR}/retargeting-robot-models/robots)
 foreach (ROBOT_DIRNAME ${ROBOTS_NAMES})
   set(ROBOT_NAME ${ROBOT_DIRNAME})
-  set(ROBOT_MODEL_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/retargeting-models/robots/${ROBOT_NAME}/model.config")
+  set(ROBOT_MODEL_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/retargeting-robot-models/robots/${ROBOT_NAME}/model.config")
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/model.config.in
                  ${ROBOT_MODEL_CONFIG_FILE}
                  @ONLY)
 endforeach()
 
 # Install the whole retargeting-models directory
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/retargeting-models DESTINATION share)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/retargeting-robot-models DESTINATION share)

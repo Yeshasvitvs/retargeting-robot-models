@@ -1,0 +1,12 @@
+<package>
+  <name>retargeting-robot-models</name>
+  <version>1.6.0</version>
+  <description>
+    This is retargeting-robot-models ros package that contains the urdf models, meshes
+    and yarp motor control boards configurations of several robots to perform retargeting
+    experiments.
+  </description>
+  <maintainer email=""></maintainer>
+  <url></url>
+  <author></author>
+</package>
