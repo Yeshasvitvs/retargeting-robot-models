@@ -393,6 +393,13 @@
   </joint>
   <link name="r_sole"/>
   <link name="base_link"/>
+  <link name ="world"/>
+  <joint name="world_base_fixed_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 1" rpy="0 -0 0"/>
+    <axis xyz="0 0 0"/>
+  </joint>
   <joint name="base_link_fixedjoint" type="fixed">
     <parent link="base_link"/>
     <child link="torso"/>
