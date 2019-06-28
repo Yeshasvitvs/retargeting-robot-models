@@ -1018,7 +1018,7 @@
     <origin rpy="0 0 -1.5708" xyz="0.035 -0.025 0.0035"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <link name="RFinger23_link">
+  <!--link name="RFinger23_link">
     <inertial>
       <mass value="2e-06"/>
       <inertia ixx="1.1e-09" ixy="0" ixz="0" iyy="1.1e-09" iyz="0" izz="1.1e-09"/>
@@ -1417,33 +1417,49 @@
     <origin rpy="0 0 -0.999899" xyz="0.01436 0 0"/>
     <axis xyz="0 0 1.0"/>
     <mimic joint="LHand" multiplier="0.999899" offset="0"/>
-  </joint>
+  </joint-->
 
   <!--Gazebo yarp motor control board plugins-->
   <gazebo>
 
   <plugin name="controlboard_head" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://nao/conf/gazebo_nao_head.ini</yarpConfigurationFile>
+    <initialConfiguration>0.0 0.0</initialConfiguration>
   </plugin>
 
   <plugin name="controlboard_pelvis" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://nao/conf/gazebo_nao_pelvis.ini</yarpConfigurationFile>
+    <initialConfiguration>0.0 0.0</initialConfiguration>
   </plugin>
 
   <plugin name="controlboard_left_arm" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://nao/conf/gazebo_nao_left_arm.ini</yarpConfigurationFile>
+    <initialConfiguration>1.57 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
   </plugin>
+
+  <!--plugin name="controlboard_left_hand" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://nao/conf/gazebo_nao_left_hand.ini</yarpConfigurationFile>
+    <initialConfiguration>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+  </plugin-->
 
   <plugin name="controlboard_right_arm" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://nao/conf/gazebo_nao_right_arm.ini</yarpConfigurationFile>
+    <initialConfiguration>1.57 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
   </plugin>
+
+  <!--plugin name="controlboard_right_hand" filename="libgazebo_yarp_controlboard.so">
+    <yarpConfigurationFile>model://nao/conf/gazebo_nao_right_hand.ini</yarpConfigurationFile>
+    <initialConfiguration>0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+  </plugin-->
 
   <plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://nao/conf/gazebo_nao_left_leg.ini</yarpConfigurationFile>
+    <initialConfiguration>0.0 0.0 0.0 0.0 0.0</initialConfiguration>
   </plugin>
 
   <plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://nao/conf/gazebo_nao_right_leg.ini</yarpConfigurationFile>
+    <initialConfiguration>0.0 0.0 0.0 0.0 0.0</initialConfiguration>
   </plugin>
 
 </gazebo>
@@ -1520,7 +1536,7 @@
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="RShoulder">
     <mu1>0.5</mu1>
@@ -1556,7 +1572,7 @@
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <!--    <gazebo reference="LElbowDummy">
         <mu1>0.5</mu1>
@@ -1569,49 +1585,49 @@
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="LFinger12_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="LFinger13_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="LFinger21_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="LFinger22_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="LFinger23_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="LThumb1_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="LThumb2_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="LPelvis">
     <mu1>0.5</mu1>
@@ -1695,49 +1711,49 @@
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="RFinger12_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="RFinger13_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="RFinger21_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="RFinger22_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="RFinger23_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="RThumb1_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <gazebo reference="RThumb2_link">
     <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
-    <turnGravityOff>true</turnGravityOff>
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
 
 </robot>
