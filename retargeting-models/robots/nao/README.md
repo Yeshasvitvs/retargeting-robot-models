@@ -6,3 +6,12 @@ The following are the resources used in putting together the nao model for retar
 
 The urdf model present in this repo does not have all the joints like for the hands
 and fingers. It contains only the main joint that are useful for whole body retargeting.
+
+Total Controllable Joints
+
+- Head      2
+- Pelvis    2
+- Left Arm  5
+- Right Arm 5
+- Left Leg  5
+- Right Leg 5
