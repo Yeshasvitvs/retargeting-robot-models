@@ -1441,7 +1441,7 @@
 
   <plugin name="controlboard_left_arm" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://nao/conf/gazebo_nao_left_arm.ini</yarpConfigurationFile>
-    <initialConfiguration>1.57 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+    <initialConfiguration>1.57 0.0 0.0 0.0 0.0</initialConfiguration>
   </plugin>
 
   <!--plugin name="controlboard_left_hand" filename="libgazebo_yarp_controlboard.so">
@@ -1451,7 +1451,7 @@
 
   <plugin name="controlboard_right_arm" filename="libgazebo_yarp_controlboard.so">
     <yarpConfigurationFile>model://nao/conf/gazebo_nao_right_arm.ini</yarpConfigurationFile>
-    <initialConfiguration>1.57 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+    <initialConfiguration>1.57 0.0 0.0 0.0 0.0</initialConfiguration>
   </plugin>
 
   <!--plugin name="controlboard_right_hand" filename="libgazebo_yarp_controlboard.so">
