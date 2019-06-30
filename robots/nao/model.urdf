@@ -1025,6 +1025,128 @@
     <origin rpy="0 0 -1.5708" xyz="0.035 -0.025 0.0035"/>
     <axis xyz="0 0 0"/>
   </joint>
+  <!-- ************************  Fictatious Frames  ********************** -->
+  <!-- ****** Left Arm -->
+
+  <link name="LBicep_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LBicep_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 0 -1.57079632679"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LBicep"/>
+  <child link="LBicep_fake"/>
+  </joint>
+
+  <link name="LElbow_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LElbow_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 0 -1.57079632679"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LElbow"/>
+  <child link="LElbow_fake"/>
+  </joint>
+
+  <link name="LForeArm_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LForeArm_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 0 -1.57079632679"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LForeArm"/>
+  <child link="LForeArm_fake"/>
+  </joint>
+
+
+    <link name="l_wrist_fake">
+    <inertial>
+        <mass value="0.0001"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+    </link>
+    <joint name="j_l_wrist_fake" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 -1.57079632679"/>
+    <axis xyz="0 0 0"/>
+    <parent link="l_wrist"/>
+    <child link="l_wrist_fake"/>
+    </joint>
+
+  <!-- ****** Right Arm -->
+
+
+    <link name="RBicep_fake">
+    <inertial>
+        <mass value="0.0001"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+    </link>
+    <joint name="j_RBicep_fake" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 1.57079632679"/>
+    <axis xyz="0 0 0"/>
+    <parent link="RBicep"/>
+    <child link="RBicep_fake"/>
+    </joint>
+
+    <link name="RElbow_fake">
+    <inertial>
+        <mass value="0.0001"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+    </link>
+    <joint name="j_RElbow_fake" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 1.57079632679"/>
+    <axis xyz="0 0 0"/>
+    <parent link="RElbow"/>
+    <child link="RElbow_fake"/>
+    </joint>
+
+    <link name="RForeArm_fake">
+    <inertial>
+        <mass value="0.0001"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+    </link>
+    <joint name="j_RForeArm_fake" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 1.57079632679"/>
+    <axis xyz="0 0 0"/>
+    <parent link="RForeArm"/>
+    <child link="RForeArm_fake"/>
+    </joint>
+
+
+      <link name="r_wrist_fake">
+      <inertial>
+          <mass value="0.0001"/>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      </link>
+      <joint name="j_r_wrist_fake" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 1.57079632679"/>
+      <axis xyz="0 0 0"/>
+      <parent link="r_wrist"/>
+      <child link="r_wrist_fake"/>
+      </joint>
+
+  <!-- ************************************************************** -->
+
   <!--link name="RFinger23_link">
     <inertial>
       <mass value="2e-06"/>
