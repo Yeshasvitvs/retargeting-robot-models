@@ -862,6 +862,99 @@
   </joint>
   <link name="rear_situational_awareness_camera_optical_frame"/>
 
+ <!-- ************************  Fictatious Frames  ********************** -->
+  <!-- ****** Left Arm -->
+
+  <link name="l_uarm_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_l_uarm_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -1.57079632679 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="l_uarm"/>
+  <child link="l_uarm_fake"/>
+  </joint>
+
+  <link name="l_ufarm_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_l_ufarm_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -1.57079632679 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="l_ufarm"/>
+  <child link="l_ufarm_fake"/>
+  </joint>
+
+
+  <link name="l_hand_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_l_hand_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -1.57079632679 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="l_hand"/>
+  <child link="l_hand_fake"/>
+  </joint>
+<!-- ****** Right Arm -->
+
+  <link name="r_uarm_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_r_uarm_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -1.57079632679 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="r_uarm"/>
+  <child link="r_uarm_fake"/>
+  </joint>
+
+  <link name="r_ufarm_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_r_ufarm_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -1.57079632679 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="r_ufarm"/>
+  <child link="r_ufarm_fake"/>
+  </joint>
+
+
+  <link name="r_hand_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_r_hand_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -1.57079632679 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="r_hand"/>
+  <child link="r_hand_fake"/>
+  </joint>
+
+  <!-- ************************************************************** -->
+
+
   <!-- Gazebo yarp motor control boards-->
   <gazebo>
 

@@ -1648,6 +1648,181 @@ and to define the end effectors of the robot-->
     <child link="imu_link2"/>
     <origin rpy="0 0 0" xyz="0.0135 0.0 0.0601"/>
   </joint>
+  <!-- ************************  Fictatious Frames  ********************** -->
+  <!-- ****** Left Arm -->
+
+  <link name="LShr_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LShr_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="-1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LShr"/>
+  <child link="LShr_fake"/>
+  </joint>
+
+  <link name="LShy_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LShy_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="-1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LShy"/>
+  <child link="LShy_fake"/>
+  </joint>
+
+  <link name="LElb_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LElb_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="-1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LElb"/>
+  <child link="LElb_fake"/>
+  </joint>
+
+  <link name="LForearm_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LForearm_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="-1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LForearm"/>
+  <child link="LForearm_fake"/>
+  </joint>
+
+  <link name="LWrMot2_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LWrMot2_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="-1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LWrMot2"/>
+  <child link="LWrMot2_fake"/>
+  </joint>
+
+  <link name="LWrMot3_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_LWrMot3_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="-1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="LWrMot3"/>
+  <child link="LWrMot3_fake"/>
+  </joint>
+
+<!-- ****** Right Arm -->
+
+  <link name="RShr_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_RShr_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="RShr"/>
+  <child link="RShr_fake"/>
+  </joint>
+
+  <link name="RShy_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_RShy_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="RShy"/>
+  <child link="RShy_fake"/>
+  </joint>
+
+  <link name="RElb_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_RElb_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="RElb"/>
+  <child link="RElb_fake"/>
+  </joint>
+
+  <link name="RForearm_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_RForearm_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="RForearm"/>
+  <child link="RForearm_fake"/>
+  </joint>
+
+  <link name="RWrMot2_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_RWrMot2_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="RWrMot2"/>
+  <child link="RWrMot2_fake"/>
+  </joint>
+
+  <link name="RWrMot3_fake">
+  <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="0.0003" iyy="0.0003" izz="0.0003" ixy="0" ixz="0" iyz="0"/>
+  </inertial>
+  </link>
+  <joint name="j_RWrMot3_fake" type="fixed">
+  <origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+  <axis xyz="0 0 0"/>
+  <parent link="RWrMot3"/>
+  <child link="RWrMot3_fake"/>
+  </joint>
+
+  <!-- ************************************************************** -->
+
 
   <gazebo>
 
