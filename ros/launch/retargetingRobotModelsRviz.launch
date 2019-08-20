@@ -1,0 +1,64 @@
+<launch>
+    
+    <group ns="Rviz">
+        <arg name="rvizconfig" default="$(find retargeting-robot-models)/ros/rviz/retargetingRobotModelsRviz.rviz"/>
+
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true"/>
+    </group>
+
+    <group ns="Human">
+        <arg name="Human"/>
+        <arg name="gui" default="False"/>
+        <arg name="vel" default="True"/>
+        <arg name="eff" default="True"/>
+        <arg name="humanModel" default="$(find HDERviz)/urdfs/humanSubject01_66dof.urdf"/>
+
+        <param name="robot_description" command="$(find xacro)/xacro $(arg humanModel)"/>
+        <param name="use_gui" value="$(arg gui)"/>
+    </group>
+
+    <group ns="Nao">
+        <arg name="iCub"/>
+        <arg name="gui" default="False"/>
+        <arg name="vel" default="True"/>
+        <arg name="eff" default="True"/>
+        <arg name="naoModel" default="$(find retargeting-robot-models)/robots/nao/nao.urdf"/>
+
+        <param name="robot_description" command="$(find xacro)/xacro $(arg naoModel)"/>
+        <param name="use_gui" value="$(arg gui)"/>
+    </group>
+
+    <group ns="iCub">
+        <arg name="iCub"/>
+        <arg name="gui" default="False"/>
+        <arg name="vel" default="True"/>
+        <arg name="eff" default="True"/>
+        <arg name="iCubModel" default="$(find iCub)/robots/iCubGazeboV2_5/model.urdf"/>
+
+        <param name="robot_description" command="$(find xacro)/xacro $(arg iCubModel)"/>
+        <param name="use_gui" value="$(arg gui)"/>
+    </group>
+
+    <group ns="Atlas">
+        <arg name="iCub"/>
+        <arg name="gui" default="False"/>
+        <arg name="vel" default="True"/>
+        <arg name="eff" default="True"/>
+        <arg name="atlasModel" default="$(find retargeting-robot-models)/robots/atlas/atlas.urdf"/>
+
+        <param name="robot_description" command="$(find xacro)/xacro $(arg atlasModel)"/>
+        <param name="use_gui" value="$(arg gui)"/>
+    </group>
+
+    <group ns="Baxter">
+        <arg name="iCub"/>
+        <arg name="gui" default="False"/>
+        <arg name="vel" default="True"/>
+        <arg name="eff" default="True"/>
+        <arg name="baxterModel" default="$(find retargeting-robot-models)/robots/baxter/baxter.urdf"/>
+
+        <param name="robot_description" command="$(find xacro)/xacro $(arg baxterModel)"/>
+        <param name="use_gui" value="$(arg gui)"/>
+    </group>
+
+</launch>

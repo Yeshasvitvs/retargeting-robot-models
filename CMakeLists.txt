@@ -14,6 +14,7 @@ macro(SUBDIRLIST result curdir)
 endmacro()
 
 # Copy the retargeting-models folder in the build tree
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ros DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/retargeting-robot-models)
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/robots DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/retargeting-robot-models)
 file(COPY package.xml DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/retargeting-robot-models)
 
