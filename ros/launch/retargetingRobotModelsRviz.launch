@@ -1,5 +1,5 @@
 <launch>
-    
+
     <group ns="Rviz">
         <arg name="rvizconfig" default="$(find retargeting-robot-models)/ros/rviz/retargetingRobotModelsRviz.rviz"/>
 
@@ -18,7 +18,7 @@
     </group>
 
     <group ns="Nao">
-        <arg name="iCub"/>
+        <arg name="Nao"/>
         <arg name="gui" default="False"/>
         <arg name="vel" default="True"/>
         <arg name="eff" default="True"/>
@@ -39,8 +39,19 @@
         <param name="use_gui" value="$(arg gui)"/>
     </group>
 
+    <group ns="Walkman">
+        <arg name="Walkman"/>
+        <arg name="gui" default="False"/>
+        <arg name="vel" default="True"/>
+        <arg name="eff" default="True"/>
+        <arg name="walkmanModel" default="$(find retargeting-robot-models)/robots/walkman/walkman.urdf"/>
+
+        <param name="robot_description" command="$(find xacro)/xacro $(arg walkmanModel)"/>
+        <param name="use_gui" value="$(arg gui)"/>
+    </group>
+
     <group ns="Atlas">
-        <arg name="iCub"/>
+        <arg name="Atlas"/>
         <arg name="gui" default="False"/>
         <arg name="vel" default="True"/>
         <arg name="eff" default="True"/>
@@ -51,7 +62,7 @@
     </group>
 
     <group ns="Baxter">
-        <arg name="iCub"/>
+        <arg name="Baxter"/>
         <arg name="gui" default="False"/>
         <arg name="vel" default="True"/>
         <arg name="eff" default="True"/>
