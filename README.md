@@ -30,7 +30,7 @@ export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/<path-to-retargeting-robot-models
 
 ```
 
-###### Running Retargeting with Multiple Robot Models
+##### Running Retargeting with Multiple Robot Models
 
 The directory `retargeting-shell-scripts` contains bash scripts to run retargeting demo
 with multiple robot models easily.
@@ -47,7 +47,7 @@ The multiple robot models include the following models:
 - Atlas
 - Baxter
 
-###### Running Rviz Visualization with Multiple Robot Models
+##### Running Rviz Visualization with Multiple Robot Models
 
 The directory `ros` contains `roslaunch` file and `rviz` configuration file.
 To launch Rviz Visualization with multiple robot model run the following command on a terminal after running retargeting with multiple robot models
