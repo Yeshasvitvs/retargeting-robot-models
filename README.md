@@ -55,3 +55,11 @@ To launch Rviz Visualization with multiple robot model run the following command
 ```
 roslaunch retargeting-robot-models retargetingRobotModelsRviz.launch
 ```
+
+**NOTE:** Sometimes even when the environment variables related to ros i.e. `ROS_PACKAGE_PATH` are correctly configures to
+discover the urdf models, Rviz fails to display the visual elements of the models even when all the links transforms are available in `/tf` topic. To overcome this problem add the following line to `.bashrc` as pointed out [here](https://github.com/ros-visualization/rviz/issues/1151#issuecomment-345726355)
+
+```
+export LC_NUMERIC="en_US.UTF-8"
+
+```
