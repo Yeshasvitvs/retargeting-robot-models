@@ -351,7 +351,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-      Name: RobotModel
+      Name: HumanModel
       Robot Description: Human/robot_description
       TF Prefix: Human
       Update Interval: 0
@@ -702,7 +702,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-      Name: RobotModel
+      Name: NaoModel
       Robot Description: Nao/robot_description
       TF Prefix: Nao
       Update Interval: 0
@@ -1513,7 +1513,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-      Name: RobotModel
+      Name: iCubModel
       Robot Description: iCub/robot_description
       TF Prefix: iCub
       Update Interval: 0
@@ -1966,7 +1966,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-      Name: RobotModel
+      Name: WalkmanModel
       Robot Description: Walkman/robot_description
       TF Prefix: Walkman
       Update Interval: 0
@@ -2190,7 +2190,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-      Name: RobotModel
+      Name: AtlasModel
       Robot Description: Atlas/robot_description
       TF Prefix: Atlas
       Update Interval: 0
@@ -2500,7 +2500,7 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-      Name: RobotModel
+      Name: BaxterModel
       Robot Description: Baxter/robot_description
       TF Prefix: Baxter
       Update Interval: 0
