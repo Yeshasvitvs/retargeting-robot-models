@@ -17,17 +17,6 @@
         <param name="use_gui" value="$(arg gui)"/>
     </group>
 
-    <group ns="Nao">
-        <arg name="Nao"/>
-        <arg name="gui" default="False"/>
-        <arg name="vel" default="True"/>
-        <arg name="eff" default="True"/>
-        <arg name="naoModel" default="$(find retargeting-robot-models)/robots/nao/nao.urdf"/>
-
-        <param name="robot_description" command="$(find xacro)/xacro $(arg naoModel)"/>
-        <param name="use_gui" value="$(arg gui)"/>
-    </group>
-
     <group ns="iCub">
         <arg name="iCub"/>
         <arg name="gui" default="False"/>
@@ -58,6 +47,17 @@
         <arg name="atlasModel" default="$(find retargeting-robot-models)/robots/atlas/atlas.urdf"/>
 
         <param name="robot_description" command="$(find xacro)/xacro $(arg atlasModel)"/>
+        <param name="use_gui" value="$(arg gui)"/>
+    </group>
+
+    <group ns="Nao">
+        <arg name="Nao"/>
+        <arg name="gui" default="False"/>
+        <arg name="vel" default="True"/>
+        <arg name="eff" default="True"/>
+        <arg name="naoModel" default="$(find retargeting-robot-models)/robots/nao/nao.urdf"/>
+
+        <param name="robot_description" command="$(find xacro)/xacro $(arg naoModel)"/>
         <param name="use_gui" value="$(arg gui)"/>
     </group>
 
